@@ -15,14 +15,14 @@ public class GlobalVariablesScript : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	/*void Start () {
 		currentLevel = 1;
 		fishCaughtTotal = 0;
 		fishCaughtToday = 0;
 		totalMoney = 0;
 		fishInWater = 100;
 		trashInWater = 0;
-	}
+	}*/
 
 
 }
