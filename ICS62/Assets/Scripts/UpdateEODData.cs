@@ -43,7 +43,10 @@ public class UpdateEODData : MonoBehaviour {
 		newBalanceText.text = "New Balance: " + globalVars.totalMoney;
 	}
 
-	void continueClicked() {
+	public void continueClicked() {
+		//Update level text
+		setContinueText();
+
 		//Deactivate Text
 		fishCaughtText.gameObject.SetActive (!fishCaughtText.IsActive ());
 		dailyIncomeText.gameObject.SetActive (!dailyIncomeText.IsActive ());
@@ -58,8 +61,33 @@ public class UpdateEODData : MonoBehaviour {
 	}
 
 	//Load game scene
-	void startNextLevel() {
+	public void startNextLevel() {
 		SceneManager.LoadScene ("LevelOne");
+	}
+
+	void setContinueText() {
+		switch (globalVars.currentLevel) {
+		case 1:
+			continueText.text = 
+				"A music festival is held next to the lake. Although trash cans were available, " +
+			"much of the trash ends up on the ground and eventually makes it into the lake. " +
+			"As a result, 10 units of trash are added to the lake.";
+			break;
+		case 2:
+			continueText.text = 
+				"A music festival is held next to the lake. Although trash cans were available, " +
+				"much of the trash ends up on the ground and eventually makes it into the lake. " +
+				"As a result, 10 units of trash are added to the lake.";
+			break;
+		case 3:
+			continueText.text = 
+				"The nearby factory had an issue with trash lines, and trash accidentally leaked " +
+			"into the lake. The issue was fixed, but 20 units of trash are added to the lake.";
+			break;
+		default:
+			continueText.text = "Default Text";
+			break;
+		}
 	}
 
 
