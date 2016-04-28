@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UpdateEODData : MonoBehaviour {
 
-
+	public Text endOfDayText;
 	public Text fishCaughtText;
 	public Text dailyIncomeText;
 	public Text expensesText;
@@ -25,6 +25,14 @@ public class UpdateEODData : MonoBehaviour {
 	}
 
 	void Start() {
+		endOfDayText.fontSize = (int)(Screen.height * 0.08f);
+		fishCaughtText.fontSize = (int)(Screen.height * 0.04f);
+		dailyIncomeText.fontSize = (int)(Screen.height * 0.04f);
+		expensesText.fontSize = (int)(Screen.height * .04f);
+		previousMoneyText.fontSize = (int)(Screen.height * 0.04f);
+		newBalanceText.fontSize = (int)(Screen.height * 0.04f);
+		continueText.fontSize = (int)(Screen.height * 0.04f);
+		Debug.Log (fishCaughtText.fontSize);
 
 		//Calculate income & expenses
 		todaysIncome = (globalVars.fishCaughtToday * 100);
