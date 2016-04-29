@@ -2,6 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/*
+ * InstructionsButton
+ * 
+ * Activates/deactivates the specified objects
+ */ 
 public class InstructionsButton : MonoBehaviour {
 
 	public Button startButton;

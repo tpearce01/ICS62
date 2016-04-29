@@ -3,6 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+ * UpdateEODData
+ * 
+ * Updates End of Day page Data. Calculates income and expenses, then total 
+ * balance. If the balance is less than 0, then when "Continue" is clicked,
+ * the player is sent to the GameOver scene. Otherwise, the player sees
+ * some story text about the next level. Once the player presses the
+ * Next Level button, the level scene will be loaded.
+ */ 
 public class UpdateEODData : MonoBehaviour {
 
 	public Text endOfDayText;

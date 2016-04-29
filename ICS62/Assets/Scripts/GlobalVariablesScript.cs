@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * GlobalVariablesScript
+ * 
+ * Contains a list of variables that need to persist between scenes.
+ * This object is not destroyed between scenes, unless the player 
+ * reaches a Game Over state.
+ */ 
 public class GlobalVariablesScript : MonoBehaviour {
 
 	public int currentLevel;
@@ -13,16 +20,6 @@ public class GlobalVariablesScript : MonoBehaviour {
 	void Awake () {
 		DontDestroyOnLoad (this);
 	}
-
-	// Use this for initialization
-	/*void Start () {
-		currentLevel = 1;
-		fishCaughtTotal = 0;
-		fishCaughtToday = 0;
-		totalMoney = 0;
-		fishInWater = 100;
-		trashInWater = 0;
-	}*/
 
 
 }

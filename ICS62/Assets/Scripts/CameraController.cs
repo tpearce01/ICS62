@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * CameraController
+ * 
+ * Controls camera movement. Camera will follow the player.
+ */
 public class CameraController: MonoBehaviour {
 
 	public GameObject player;

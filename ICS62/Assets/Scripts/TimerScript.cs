@@ -3,6 +3,13 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+/*
+ * TimerScript
+ * 
+ * Runs the timer in LevelOne scene. When the timer is 0, the 
+ * End of Day scene is loaded
+ */ 
 public class TimerScript : MonoBehaviour {
 
 	public float timeStart;

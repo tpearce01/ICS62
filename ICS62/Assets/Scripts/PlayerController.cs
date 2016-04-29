@@ -2,6 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;	
 
+/*
+ * PlayerController
+ * 
+ * Controls player movement
+ */ 
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
