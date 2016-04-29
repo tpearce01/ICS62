@@ -21,6 +21,7 @@ public class UpdateEODData : MonoBehaviour {
 	public Text previousMoneyText;
 	public Text newBalanceText;
 	public Text continueText;
+	public Text trashText;
 	public Button continueButton;
 	public Button nextLevelButton;
 
@@ -62,15 +63,16 @@ public class UpdateEODData : MonoBehaviour {
 			//Update level text
 			setContinueText ();
 
-			//Deactivate Text
+			//Deactivate/Activate Text
 			fishCaughtText.gameObject.SetActive (!fishCaughtText.IsActive ());
 			dailyIncomeText.gameObject.SetActive (!dailyIncomeText.IsActive ());
 			expensesText.gameObject.SetActive (!expensesText.IsActive ());
 			previousMoneyText.gameObject.SetActive (!previousMoneyText.IsActive ());
 			newBalanceText.gameObject.SetActive (!newBalanceText.IsActive ());
 			continueText.gameObject.SetActive (!continueText.IsActive ());
+			trashText.gameObject.SetActive (!trashText.IsActive ());
 
-			//Deactivate button/Activate button
+			//Deactivate/Activate buttons
 			continueButton.gameObject.SetActive (!continueButton.IsActive ());
 			nextLevelButton.gameObject.SetActive (!nextLevelButton.IsActive ());
 		}
@@ -83,27 +85,32 @@ public class UpdateEODData : MonoBehaviour {
 
 	void setContinueText() {
 		switch (globalVars.currentLevel) {
-		case 1:
+		case 1:	//Case 1 should not be reached, as it starts at level1 and increments to 2 before this is reached
 			continueText.text = 
 				"A music festival is held next to the lake. Although trash cans were available, " +
 			"much of the trash ends up on the ground and eventually makes it into the lake. " +
 			"As a result, 10 units of trash are added to the lake.";
+			globalVars.trashInWater += 10;
 			break;
 		case 2:
 			continueText.text = 
 				"A music festival is held next to the lake. Although trash cans were available, " +
 				"much of the trash ends up on the ground and eventually makes it into the lake. " +
 				"As a result, 10 units of trash are added to the lake.";
+			globalVars.trashInWater += 10;
 			break;
 		case 3:
 			continueText.text = 
 				"The nearby factory had an issue with trash lines, and trash accidentally leaked " +
 			"into the lake. The issue was fixed, but 20 units of trash are added to the lake.";
+			globalVars.trashInWater += 20;
 			break;
 		default:
 			continueText.text = "Default Text";
 			break;
 		}
+
+		trashText.text = "Total Units of Trash: " + globalVars.trashInWater;
 	}
 
 

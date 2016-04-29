@@ -8,6 +8,7 @@ using UnityEngine.UI;
  * Activates/deactivates the specified objects
  */ 
 public class InstructionsButton : MonoBehaviour {
+	
 
 	public Button startButton;
 	public Button instructionsButton;
@@ -16,6 +17,26 @@ public class InstructionsButton : MonoBehaviour {
 	public Text instructionsText;
 	public Text instructionsTitle;
 	public Text titleText;
+
+	public int nativeWidth;
+	public int nativeHeight;
+
+	private float screenRatio;
+	private int fontSize;
+
+	void Start() {
+		screenRatio = Screen.width / nativeWidth;
+		fontSize = (int)(screenRatio * titleText.fontSize);
+		titleText.fontSize = fontSize;
+		instructionsTitle.fontSize = fontSize;
+
+		fontSize = (int)(screenRatio * startButton.GetComponentInChildren<Text>().fontSize);
+		startButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+		instructionsButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+		quitButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+		returnButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+		instructionsText.GetComponentInChildren<Text> ().fontSize = fontSize;
+	}
 
 	public void clickMe() {
 		startButton.gameObject.SetActive (!startButton.IsActive ());
