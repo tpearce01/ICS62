@@ -9,7 +9,7 @@ using UnityEngine.UI;
  */ 
 public class InstructionsButton : MonoBehaviour {
 	
-
+	//GUI variables
 	public Button startButton;
 	public Button instructionsButton;
 	public Button quitButton;
@@ -17,20 +17,20 @@ public class InstructionsButton : MonoBehaviour {
 	public Text instructionsText;
 	public Text instructionsTitle;
 	public Text titleText;
-
-	public int nativeWidth;
-	public int nativeHeight;
-
-	private float screenRatio;
 	private int fontSize;
 
+	//Global Variables
+	private GlobalVariablesScript globalVars;
+
+	//Initialize global variables and adjust font sizes
 	void Start() {
-		screenRatio = Screen.width / nativeWidth;
-		fontSize = (int)(screenRatio * titleText.fontSize);
+		globalVars = GameObject.FindGameObjectWithTag ("GlobalVariables").GetComponent<GlobalVariablesScript> ();
+
+		fontSize = (int)(globalVars.screenRatio * titleText.fontSize);
 		titleText.fontSize = fontSize;
 		instructionsTitle.fontSize = fontSize;
 
-		fontSize = (int)(screenRatio * startButton.GetComponentInChildren<Text>().fontSize);
+		fontSize = (int)(globalVars.screenRatio * startButton.GetComponentInChildren<Text>().fontSize);
 		startButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		instructionsButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		quitButton.GetComponentInChildren<Text> ().fontSize = fontSize;
@@ -38,6 +38,7 @@ public class InstructionsButton : MonoBehaviour {
 		instructionsText.GetComponentInChildren<Text> ().fontSize = fontSize;
 	}
 
+	//Set GUI objects active/inactive
 	public void clickMe() {
 		startButton.gameObject.SetActive (!startButton.IsActive ());
 		instructionsButton.gameObject.SetActive (!instructionsButton.IsActive ());

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
  */ 
 public class StartGame : MonoBehaviour {
 
-
+	//Load main game scene
 	public void LoadLevelOne(){
 		SceneManager.LoadScene ("LevelOne");
 	}

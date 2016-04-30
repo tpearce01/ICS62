@@ -14,6 +14,12 @@ using UnityEngine.SceneManagement;
  */ 
 public class UpdateEODData : MonoBehaviour {
 
+	//Private vars
+	private GlobalVariablesScript globalVars;
+	private int todaysIncome;
+	private int todaysExpenses;
+
+	//GUI vars
 	public Text endOfDayText;
 	public Text fishCaughtText;
 	public Text dailyIncomeText;
@@ -24,10 +30,7 @@ public class UpdateEODData : MonoBehaviour {
 	public Text trashText;
 	public Button continueButton;
 	public Button nextLevelButton;
-
-	private GlobalVariablesScript globalVars;
-	private int todaysIncome;
-	private int todaysExpenses;
+	private int fontSize;
 
 	void Awake() {
 		//Set globalVars script object
@@ -35,7 +38,6 @@ public class UpdateEODData : MonoBehaviour {
 	}
 
 	void Start() {
-		
 
 		//Calculate income & expenses
 		todaysIncome = (globalVars.fishCaughtToday * 100);
@@ -52,10 +54,27 @@ public class UpdateEODData : MonoBehaviour {
 
 		//Update text
 		newBalanceText.text = "New Balance: " + globalVars.totalMoney;
+
+
+		//Scale Text to Resolution
+		fontSize = (int)(globalVars.screenRatio * endOfDayText.fontSize);	//Determine title font size
+		endOfDayText.fontSize = fontSize;
+
+		fontSize = (int)(globalVars.screenRatio * fishCaughtText.fontSize);	//Determine body font size
+		fishCaughtText.fontSize = fontSize;
+		dailyIncomeText.fontSize = fontSize;
+		expensesText.fontSize = fontSize;
+		previousMoneyText.fontSize = fontSize;
+		newBalanceText.fontSize = fontSize;
+		continueText.fontSize = fontSize;
+		trashText.fontSize = fontSize;
+		continueButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+		nextLevelButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 	}
 
 	public void continueClicked() {
 
+		//If player has no money, load game over scene, otherwise display "Continue" screen
 		if (globalVars.totalMoney < 0) {
 			SceneManager.LoadScene ("GameOver");
 		} else {
@@ -83,6 +102,7 @@ public class UpdateEODData : MonoBehaviour {
 		SceneManager.LoadScene ("LevelOne");
 	}
 
+	//Display story text
 	void setContinueText() {
 		switch (globalVars.currentLevel) {
 		case 1:	//Case 1 should not be reached, as it starts at level1 and increments to 2 before this is reached

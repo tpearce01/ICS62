@@ -12,10 +12,12 @@ using UnityEngine.SceneManagement;
  */ 
 public class TimerScript : MonoBehaviour {
 
+	//Timer variables
 	public float timeStart;
 	public Text textToUpdate;
-
 	private float timeRemaining;
+
+	//Global variables
 	private GlobalVariablesScript globalVars;
 
 	// Use this for initialization
@@ -35,6 +37,7 @@ public class TimerScript : MonoBehaviour {
 		}
 	}
 
+	//Load end of day scene and increment level
 	void loadEndOfDay() {
 		globalVars.currentLevel++;
 		SceneManager.LoadScene ("EndOfDay");
