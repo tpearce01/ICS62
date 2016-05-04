@@ -40,13 +40,12 @@ public class PlayerController : MonoBehaviour {
 			transform.Rotate(Vector3.up, speed * 25 * Time.deltaTime);
 		}
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
-			Debug.Log ("Mouse (left) clicked");
 			if (!hasCast) {
 				CastRod ();
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.Mouse1)) {
-			Debug.Log ("Mouse (right) clicked");
+			//Debug.Log ("Mouse (right) clicked");
 		}
 
 
