@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class RodCastInWater : MonoBehaviour {
 
@@ -10,9 +11,13 @@ public class RodCastInWater : MonoBehaviour {
 
 	public GameObject fishIcon;		//prefabs
 	public GameObject playerBar;	//prefabs
+	public GameObject progressBar;
+	public GameObject triggerObject;
 
 	private GameObject fishIconCopy;
 	private GameObject playerBarCopy;
+	private GameObject progressBarCopy;
+	private GameObject triggerObjectCopy;
 
 	private bool inWater;		//is the bobber in the water?
 	private bool hasBite;		//is a fish biting the line?
@@ -66,7 +71,7 @@ public class RodCastInWater : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		//Destroy bobbers that land on the dock
 		if (other.CompareTag ("Dock")) {
-			Destroy (this.gameObject);
+			destroyBobber ();
 		}
 		//Halt bobber once it lands in the water
 		if (other.CompareTag ("Water")) {
@@ -108,6 +113,10 @@ public class RodCastInWater : MonoBehaviour {
 	}
 
 	public void destroyBobber(){
+		if (gameStarted) {
+			Destroy (fishIconCopy);
+			Destroy (progressBarCopy);
+		}
 		Destroy (this.gameObject);
 	}
 		
@@ -119,6 +128,10 @@ public class RodCastInWater : MonoBehaviour {
 		fishIconCopy.transform.parent = canvasObj.transform;
 		playerBarCopy = (GameObject) Instantiate (playerBar, canvasObj.transform.position, canvasObj.transform.rotation);
 		playerBarCopy.transform.parent = canvasObj.transform;
+		progressBarCopy = (GameObject)Instantiate (progressBar, canvasObj.transform.position + transform.right * 60, canvasObj.transform.rotation);
+		progressBarCopy.transform.parent = canvasObj.transform;
+		triggerObjectCopy = (GameObject)Instantiate (triggerObject, canvasObj.transform.position, canvasObj.transform.rotation);
+		triggerObjectCopy.transform.parent = canvasObj.transform;
 	}
 
 }
