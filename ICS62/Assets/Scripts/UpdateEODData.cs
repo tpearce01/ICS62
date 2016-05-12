@@ -102,33 +102,76 @@ public class UpdateEODData : MonoBehaviour {
 		SceneManager.LoadScene ("LevelOne");
 	}
 
+	int randomizeInt(int number){
+		return (number * Random.Range (0.8f, 1.2f));
+	}
+
 	//Display story text
 	void setContinueText() {
+		int trashToAdd;
 		switch (globalVars.currentLevel) {
 		case 1:	//Case 1 should not be reached, as it starts at level1 and increments to 2 before this is reached
+			trashToAdd = randomizeInt(10);
 			continueText.text = 
 				"A music festival is held next to the lake. Although trash cans were available, " +
 			"much of the trash ends up on the ground and eventually makes it into the lake. " +
-			"As a result, 10 units of trash are added to the lake.";
-			globalVars.trashInWater += 10;
+			"As a result, " + trashToAdd + " units of trash are added to the lake.";
 			break;
 		case 2:
+			trashToAdd = randomizeInt(12);
 			continueText.text = 
 				"A music festival is held next to the lake. Although trash cans were available, " +
 				"much of the trash ends up on the ground and eventually makes it into the lake. " +
-				"As a result, 10 units of trash are added to the lake.";
-			globalVars.trashInWater += 10;
+				"As a result, " + trashToAdd + " units of trash are added to the lake.";
 			break;
 		case 3:
+			trashToAdd = randomizeInt(14);
 			continueText.text = 
 				"The nearby factory had an issue with trash lines, and trash accidentally leaked " +
-			"into the lake. The issue was fixed, but 20 units of trash are added to the lake.";
-			globalVars.trashInWater += 20;
+				"into the lake. The issue was fixed, but " + trashToAdd + " units of trash are added to the lake.";
+			break;
+		case 4:
+			trashToAdd = randomizeInt (16);
+			continueText.text =
+				"A storm passes through during the night. Trash littered in the streets is pushed " +
+			"by the water into the ocean, adding " + trashToAdd + " units of trash.";
+			break;
+		case 5:
+			trashToAdd = randomizeInt (8);
+			globalVars.fishInWater -= trashToAdd;
+			continueText.text = 
+				"A nearby oil rig breaks and leaks many gallons of oil into the water. As a result," +
+			"many of the fish in the water die. " + trashToAdd + " fish die.";
+			trashToAdd = 0;
+			break;
+		case 6:
+			trashToAdd = randomizeInt (18);
+			continueText.text =
+				"Strong winds blow trash from the nearby landfill into the water, adding " + trashToAdd
+				+ " units of trash. ";
+			break;
+		case 7:
+			trashToAdd = randomizeInt (20);
+			continueText.text =
+				"The local fishing shop had a clearance sale and hosted a fishing extravaganza event." +
+			"Fishing lines, bait boxes, and packaging are lost in the water, adding " + trashToAdd +
+			"units of trash.";
+			break;
+		case 8:
+			trashToAdd = randomizeInt (20);
+			continueText.text =
+				"A nice, sunny day brings a plethora of tourists and locals to the beach. Children leave " +
+			"behind beach toys, and groups hosting bonfires leave behind food and beverage packaging. " +
+			"Cigarette butts also litter the beach and find their way into the water. " + trashToAdd +
+			" units of trash are added.";
 			break;
 		default:
 			continueText.text = "Default Text";
 			break;
 		}
+		globalVars.trashInWater += trashToAdd;
+
+		globalVars.fishInWater += randomizeInt ((int)globalVars.fishInWater * 0.05f);
 
 		trashText.text = "Total Units of Trash: " + globalVars.trashInWater;
 	}
