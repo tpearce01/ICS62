@@ -123,13 +123,14 @@ public class RodCastInWater : MonoBehaviour {
 	void startMinigame(){
 		//Instantiate and set parent here
 		GameObject canvasObj = GameObject.FindGameObjectWithTag ("Canvas");
+		playerBarCopy = (GameObject) Instantiate (playerBar, canvasObj.transform.position, canvasObj.transform.rotation);
+		playerBarCopy.transform.parent = canvasObj.transform;
 		fishIconCopy = (GameObject) Instantiate ( fishIcon, canvasObj.transform.position, canvasObj.transform.rotation);
 		fishIconCopy.transform.Rotate (0, 0, 90);
 		fishIconCopy.transform.parent = canvasObj.transform;
-		playerBarCopy = (GameObject) Instantiate (playerBar, canvasObj.transform.position, canvasObj.transform.rotation);
-		playerBarCopy.transform.parent = canvasObj.transform;
-		progressBarCopy = (GameObject)Instantiate (progressBar, canvasObj.transform.position + transform.right * 60, canvasObj.transform.rotation);
+		progressBarCopy = (GameObject)Instantiate (progressBar, canvasObj.transform.position, canvasObj.transform.rotation);
 		progressBarCopy.transform.parent = canvasObj.transform;
+		progressBarCopy.transform.Translate(new Vector3(60,0,0));
 		triggerObjectCopy = (GameObject)Instantiate (triggerObject, canvasObj.transform.position, canvasObj.transform.rotation);
 		triggerObjectCopy.transform.parent = canvasObj.transform;
 	}

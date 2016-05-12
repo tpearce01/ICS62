@@ -33,9 +33,9 @@ public class PlayerBarController : MonoBehaviour {
 			thisRB.AddForce(transform.up * forceToAdd);
 		}
 		if (isOverlapping) {
-			progressBar.value += .1f * Time.deltaTime;
+			progressBar.value += .3f * Time.deltaTime;
 		} else {
-			progressBar.value -= .1f * Time.deltaTime;
+			progressBar.value -= .3f * Time.deltaTime;
 		}
 
 		if (progressBar.value >= 1.0f) {
@@ -61,6 +61,7 @@ public class PlayerBarController : MonoBehaviour {
 		bobberScript.destroyBobber ();
 		Destroy (GameObject.FindGameObjectWithTag ("Trigger"));
 		Destroy (this.gameObject);
+		Destroy (this);
 	}
 		
 

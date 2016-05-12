@@ -103,12 +103,12 @@ public class UpdateEODData : MonoBehaviour {
 	}
 
 	int randomizeInt(int number){
-		return (number * Random.Range (0.8f, 1.2f));
+		return (int)(number * Random.Range (0.8f, 1.2f));
 	}
 
 	//Display story text
 	void setContinueText() {
-		int trashToAdd;
+		int trashToAdd = 0;
 		switch (globalVars.currentLevel) {
 		case 1:	//Case 1 should not be reached, as it starts at level1 and increments to 2 before this is reached
 			trashToAdd = randomizeInt(10);
@@ -171,7 +171,7 @@ public class UpdateEODData : MonoBehaviour {
 		}
 		globalVars.trashInWater += trashToAdd;
 
-		globalVars.fishInWater += randomizeInt ((int)globalVars.fishInWater * 0.05f);
+		globalVars.fishInWater += randomizeInt ((int)(globalVars.fishInWater * 0.05f));
 
 		trashText.text = "Total Units of Trash: " + globalVars.trashInWater;
 	}
