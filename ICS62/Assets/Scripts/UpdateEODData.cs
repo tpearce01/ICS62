@@ -39,6 +39,9 @@ public class UpdateEODData : MonoBehaviour {
 
 	void Start() {
 
+		//Update overall data
+		globalVars.fishCaughtTotal += globalVars.fishCaughtToday;
+
 		//Calculate income & expenses
 		todaysIncome = (globalVars.fishCaughtToday * 100);
 		todaysExpenses = ((globalVars.currentLevel * 175) + 100);

@@ -13,11 +13,13 @@ public class RodCastInWater : MonoBehaviour {
 	public GameObject playerBar;	//prefabs
 	public GameObject progressBar;
 	public GameObject triggerObject;
+	public GameObject background;
 
 	private GameObject fishIconCopy;
 	private GameObject playerBarCopy;
 	private GameObject progressBarCopy;
 	private GameObject triggerObjectCopy;
+	private GameObject backgroundCopy;
 
 	private bool inWater;		//is the bobber in the water?
 	private bool hasBite;		//is a fish biting the line?
@@ -83,7 +85,6 @@ public class RodCastInWater : MonoBehaviour {
 
 	//Reset hasCast to false
 	void OnDestroy() {
-		Debug.Log ("Object destroyed");
 		playerScript.hasCast = false;
 	}
 
@@ -91,7 +92,6 @@ public class RodCastInWater : MonoBehaviour {
 	void landedInWater () {
 		//Set time to live to a pseudo-normalized range of 3 to 6 seconds
 		timeToLive = Random.Range (1, 3) + Random.Range (1, 3) + Random.Range (1, 3);
-		//Debug.Log("timeToLive set: " + timeToLive + " seconds");
 		inWater = true;
 	}
 
@@ -100,8 +100,23 @@ public class RodCastInWater : MonoBehaviour {
 		//Logic to try catching a fish
 		if (hasBite && !gameStarted) {
 			//catch success
-			gameStarted = true;
-			startMinigame ();
+			//Is it trash or a fish? catchThreshold = % of object that are fish
+			float catchThreshold = (float) globalVars.fishInWater / (globalVars.fishInWater + globalVars.trashInWater);
+			float roll = Random.Range (0.0f, 1.0f);
+			Debug.Log ("CatchThreshold: " + catchThreshold);
+			Debug.Log ("Roll: " + roll);
+			if (catchThreshold >= roll) {
+				//fish
+				Debug.Log("Fish on line");
+				gameStarted = true;
+				startMinigame ();
+			} else {
+				//trash
+				Debug.Log("Trash on line");
+				globalVars.trashInWater--;
+				destroyBobber ();
+			}
+
 
 		} else {
 			//Catch fail
@@ -116,6 +131,7 @@ public class RodCastInWater : MonoBehaviour {
 		if (gameStarted) {
 			Destroy (fishIconCopy);
 			Destroy (progressBarCopy);
+			Destroy (backgroundCopy);
 		}
 		Destroy (this.gameObject);
 	}
@@ -123,6 +139,8 @@ public class RodCastInWater : MonoBehaviour {
 	void startMinigame(){
 		//Instantiate and set parent here
 		GameObject canvasObj = GameObject.FindGameObjectWithTag ("Canvas");
+		backgroundCopy = (GameObject)Instantiate (background, canvasObj.transform.position, canvasObj.transform.rotation);
+		backgroundCopy.transform.parent = canvasObj.transform;
 		playerBarCopy = (GameObject) Instantiate (playerBar, canvasObj.transform.position, canvasObj.transform.rotation);
 		playerBarCopy.transform.parent = canvasObj.transform;
 		fishIconCopy = (GameObject) Instantiate ( fishIcon, canvasObj.transform.position, canvasObj.transform.rotation);
@@ -133,6 +151,7 @@ public class RodCastInWater : MonoBehaviour {
 		progressBarCopy.transform.Translate(new Vector3(60,0,0));
 		triggerObjectCopy = (GameObject)Instantiate (triggerObject, canvasObj.transform.position, canvasObj.transform.rotation);
 		triggerObjectCopy.transform.parent = canvasObj.transform;
+
 	}
 
 }

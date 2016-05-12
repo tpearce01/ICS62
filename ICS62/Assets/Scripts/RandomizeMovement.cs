@@ -36,8 +36,5 @@ public class RandomizeMovement : MonoBehaviour {
 		//minigameStart = false;
 		Destroy (this.gameObject);
 	}
-
-	void OnTriggerEnter(Collider other){
-		Debug.Log (other.tag);
-	}
+		
 }

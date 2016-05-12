@@ -29,7 +29,6 @@ public class PlayerBarController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if(Input.GetKey(KeyCode.Mouse0)){
-			//Debug.Log ("playerBar registered mouse click");
 			thisRB.AddForce(transform.up * forceToAdd);
 		}
 		if (isOverlapping) {
@@ -40,12 +39,11 @@ public class PlayerBarController : MonoBehaviour {
 
 		if (progressBar.value >= 1.0f) {
 			//Fish captured
-			Debug.Log("progressBar = 1");
 			globalVars.fishCaughtToday++;
+			globalVars.fishInWater--;
 			endGame();
 		} else if (progressBar.value <= 0f) {
 			//Fish got away
-			Debug.Log("progress bar = 0");
 			endGame();
 		}
 
@@ -56,7 +54,6 @@ public class PlayerBarController : MonoBehaviour {
 	}
 
 	public void endGame() {
-		Debug.Log ("PlayerBarController endGame()");
 		minigameStart = false;
 		bobberScript.destroyBobber ();
 		Destroy (GameObject.FindGameObjectWithTag ("Trigger"));
