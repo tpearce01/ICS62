@@ -73,7 +73,8 @@ public class RodCastInWater : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		//Destroy bobbers that land on the dock
 		if (other.CompareTag ("Dock")) {
-			destroyBobber ();
+			//destroyBobber ();
+			Destroy (this.gameObject);
 		}
 		//Halt bobber once it lands in the water
 		if (other.CompareTag ("Water")) {
@@ -121,7 +122,8 @@ public class RodCastInWater : MonoBehaviour {
 		} else {
 			//Catch fail
 			if (!gameStarted) {
-				Destroy (this.gameObject);
+				//Destroy (this.gameObject);
+				destroyBobber();
 			}
 		}
 
@@ -133,7 +135,18 @@ public class RodCastInWater : MonoBehaviour {
 			Destroy (progressBarCopy);
 			Destroy (backgroundCopy);
 		}
-		Destroy (this.gameObject);
+		//Destroy (this.gameObject);
+		//transform.LookAt(playerScript.gameObject);
+		float distance = Vector3.Distance(this.transform.position, playerScript.gameObject.transform.position);
+		Debug.Log ("Distance: " + distance);
+		if (distance < 12) {
+			distance = 12;
+		}
+		inWater = false;
+		this.GetComponent<Rigidbody> ().useGravity = true;
+		transform.LookAt (playerScript.gameObject.transform.position);
+		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.up * 400);
+		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 33 * distance);
 	}
 		
 	void startMinigame(){

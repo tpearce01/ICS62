@@ -44,7 +44,7 @@ public class UpdateEODData : MonoBehaviour {
 
 		//Calculate income & expenses
 		todaysIncome = (globalVars.fishCaughtToday * 100);
-		todaysExpenses = ((globalVars.currentLevel * 175) + 100);
+		todaysExpenses = randomizeInt(500);
 
 		//Update text
 		fishCaughtText.text = "Fish Caught: " + globalVars.fishCaughtToday;
@@ -73,6 +73,9 @@ public class UpdateEODData : MonoBehaviour {
 		trashText.fontSize = fontSize;
 		continueButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		nextLevelButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+
+		//reset daily variables
+		globalVars.fishCaughtToday = 0;
 	}
 
 	public void continueClicked() {
