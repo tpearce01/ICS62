@@ -146,7 +146,7 @@ public class RodCastInWater : MonoBehaviour {
 		this.GetComponent<Rigidbody> ().useGravity = true;
 		transform.LookAt (playerScript.gameObject.transform.position);
 		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.up * 400);
-		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 33 * distance);
+		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 32 * distance);
 	}
 		
 	void startMinigame(){
