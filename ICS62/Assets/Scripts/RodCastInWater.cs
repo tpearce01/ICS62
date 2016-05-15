@@ -15,6 +15,7 @@ public class RodCastInWater : MonoBehaviour {
 	public GameObject triggerObject;
 	public GameObject background;
 
+	private Text trashText;
 	private GameObject fishIconCopy;
 	private GameObject playerBarCopy;
 	private GameObject progressBarCopy;
@@ -36,6 +37,7 @@ public class RodCastInWater : MonoBehaviour {
 		inWater = false;
 		hasBite = false;
 		gameStarted = false;
+		trashText = GameObject.FindGameObjectWithTag ("TrashText").GetComponent<Text>();
 	}
 	
 	// Update is called once per frame
@@ -115,6 +117,7 @@ public class RodCastInWater : MonoBehaviour {
 				//trash
 				Debug.Log("Trash on line");
 				globalVars.trashInWater--;
+				trashText.text = "Trash: " + globalVars.trashInWater;
 				destroyBobber ();
 			}
 

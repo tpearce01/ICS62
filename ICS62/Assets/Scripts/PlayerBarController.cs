@@ -7,6 +7,7 @@ public class PlayerBarController : MonoBehaviour {
 	private Slider progressBar;
 	public bool isOverlapping;
 
+	private Text fishText;
 	private GameObject thisObject;
 	private Rigidbody2D thisRB;
 	private bool minigameStart;
@@ -23,6 +24,7 @@ public class PlayerBarController : MonoBehaviour {
 		globalVars = GameObject.FindGameObjectWithTag ("GlobalVariables").GetComponent<GlobalVariablesScript> ();
 		progressBar = GameObject.FindGameObjectWithTag ("ProgressBar").GetComponent<Slider> ();
 		progressBar.value = .5f;
+		fishText = GameObject.FindGameObjectWithTag ("FishText").GetComponent<Text>();
 		startGame ();
 	}
 	
@@ -41,6 +43,7 @@ public class PlayerBarController : MonoBehaviour {
 			//Fish captured
 			globalVars.fishCaughtToday++;
 			globalVars.fishInWater--;
+			fishText.text = "Fish: " + globalVars.fishInWater;
 			endGame();
 		} else if (progressBar.value <= 0f) {
 			//Fish got away
