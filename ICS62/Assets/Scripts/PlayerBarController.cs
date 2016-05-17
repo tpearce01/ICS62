@@ -47,6 +47,7 @@ public class PlayerBarController : MonoBehaviour {
 			endGame();
 		} else if (progressBar.value <= 0f) {
 			//Fish got away
+			bobberScript.trashOnLine = true;	//Prevent bobber from wobbling
 			endGame();
 		}
 
@@ -58,7 +59,6 @@ public class PlayerBarController : MonoBehaviour {
 
 	public void endGame() {
 		minigameStart = false;
-		bobberScript.trashOnLine;
 		bobberScript.destroyBobber ();
 		Destroy (GameObject.FindGameObjectWithTag ("Trigger"));
 		Destroy (this.gameObject);
