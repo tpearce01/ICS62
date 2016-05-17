@@ -34,9 +34,9 @@ public class PlayerBarController : MonoBehaviour {
 			thisRB.AddForce(transform.up * forceToAdd);
 		}
 		if (isOverlapping) {
-			progressBar.value += .3f * Time.deltaTime;
+			progressBar.value += .26f * Time.deltaTime;
 		} else {
-			progressBar.value -= .3f * Time.deltaTime;
+			progressBar.value -= .22f * Time.deltaTime;
 		}
 
 		if (progressBar.value >= 1.0f) {
