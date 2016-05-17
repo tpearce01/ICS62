@@ -1,3 +1,9 @@
+#For mac 
+Temp/
+obj/
+Build
+Library/
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
