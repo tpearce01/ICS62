@@ -58,6 +58,7 @@ public class PlayerBarController : MonoBehaviour {
 
 	public void endGame() {
 		minigameStart = false;
+		bobberScript.trashOnLine;
 		bobberScript.destroyBobber ();
 		Destroy (GameObject.FindGameObjectWithTag ("Trigger"));
 		Destroy (this.gameObject);

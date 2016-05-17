@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class RodCastInWater : MonoBehaviour {
 
 	public float catchWindow;	//How long the player has to catch a fish once a bite occurs
+	public bool trashOnLine;	//Did the player catch trash?
 
 	private PlayerController playerScript;		//to access player variables
 	private GlobalVariablesScript globalVars;	//global variables
@@ -34,6 +35,7 @@ public class RodCastInWater : MonoBehaviour {
 	void Start () {
 		playerScript = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController>();
 		globalVars = GameObject.FindGameObjectWithTag ("GlobalVariables").GetComponent<GlobalVariablesScript> ();
+		trashOnLine = false;
 		inWater = false;
 		hasBite = false;
 		gameStarted = false;
@@ -64,7 +66,7 @@ public class RodCastInWater : MonoBehaviour {
 
 	void FixedUpdate() {
 		//If a fish is biting the line, vibrate the bobber to alert the player
-		if (hasBite || gameStarted) {
+		if ((hasBite || gameStarted) && !trashOnLine) {
 			moveX = Random.Range (-1, 2);
 			moveZ = Random.Range (-1, 2);
 			this.transform.position = new Vector3(this.transform.position.x + (moveX * 0.1f), this.transform.position.y, this.transform.position.z + (moveZ * 0.1f));
@@ -118,6 +120,7 @@ public class RodCastInWater : MonoBehaviour {
 				Debug.Log("Trash on line");
 				globalVars.trashInWater--;
 				trashText.text = "Trash: " + globalVars.trashInWater;
+				trashOnLine = true;
 				destroyBobber ();
 			}
 
