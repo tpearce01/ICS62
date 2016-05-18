@@ -803,7 +803,7 @@ MonoBehaviour:
   fishCaughtToday: 0
   totalMoney: 1000
   fishInWater: 100
-  trashInWater: 1
+  trashInWater: 0
   nativeWidth: 452
   nativeHeight: 339
   screenRatio: 0
