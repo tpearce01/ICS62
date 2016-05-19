@@ -17,6 +17,7 @@ public class InstructionsButton : MonoBehaviour {
 	public Text instructionsText;
 	public Text instructionsTitle;
 	public Text titleText;
+	public GameObject InstructionPanel;
 	private int fontSize;
 
 	//Global Variables
@@ -47,6 +48,7 @@ public class InstructionsButton : MonoBehaviour {
 		instructionsText.gameObject.SetActive (!instructionsText.IsActive ());
 		instructionsTitle.gameObject.SetActive (!instructionsTitle.IsActive ());
 		titleText.gameObject.SetActive (!titleText.IsActive ());
+		InstructionPanel.SetActive (!InstructionPanel.activeSelf);
 	}
 		
 
