@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour {
 		rodCastClone = (Rigidbody) Instantiate (rodCast, this.GetComponentInParent<Transform> ().position + transform.forward, this.GetComponentInParent<Transform> ().rotation);
 		rodCastClone.AddForce(transform.forward * forceToAdd);
 		rodCastClone.AddForce (transform.up * forceToAdd);
+
+
 	}
 
 
