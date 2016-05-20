@@ -19,7 +19,7 @@ TagManager:
   - FIshIcon
   - TrashText
   - FishText
-  - New Tag
+  - Trash
   layers:
   - Default
   - TransparentFX
