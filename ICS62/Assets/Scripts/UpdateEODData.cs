@@ -171,6 +171,54 @@ public class UpdateEODData : MonoBehaviour {
 			"Cigarette butts also litter the beach and find their way into the water. " + trashToAdd +
 			" units of trash are added.";
 			break;
+		case 9:
+			trashToAdd = randomizeInt (20);
+			continueText.text = 
+				"The local fishing shop has recently been renovated and the construction workers have been dumping their bottles " +
+			"of coke into the lake, adding " + trashToAdd + "units of trash.";
+			break;
+		case 10:
+			trashToAdd = randomizeInt (20);
+			continueText.text = 
+				"Its family lake day. Families from across the town came and had a picnic by the lake, but left without " +
+			"without picking up their trash, some of which got left behind in the waters, adding " + trashToAdd +
+			"units of trash.";
+			break;
+		case 11:
+			trashToAdd = randomizeInt (20);
+			continueText.text = 
+				"It is a windy day and a rare specie of fish has recently been discovered in the lake." +
+			"Fisherman have been flocking over to " +
+			"try to catch the beauty. Caught up in the excitement, they have been dumping their newly acquired " +
+			"rods' packaging from the local fishing shop on the shore, where the wind blew it into the lake, adding " + trashToAdd +
+			"units of trash.";
+			break;
+		case 12:
+			trashToAdd = randomizeInt (30);
+			continueText.text = 
+				"Local garbage truck came and tipped over, dumping " + trashToAdd +
+			"units of trash.";
+			break;
+		case 13:
+			trashToAdd = randomizeInt (20);
+			continueText.text = 
+				"Tornado has struck the town blowing the town's trash everywhere, some of which landed in the ocean, adding" +
+			trashToAdd + "units of trash.";
+			break;
+		case 14:
+			trashToAdd = randomizeInt (20);
+			continueText.text = 
+				"Lights! Camera! Action! A movie set decided to film a scene on the lake, but some of the actors " +
+				"left behind their trash." + trashToAdd + "units of trash.";
+			break;
+		case 15:
+			trashToAdd = randomizeInt (20);
+			continueText.text = 
+				"Annual Fishing Competition is today! Fisherman come from towns nearby to compete on who can catch " +
+			"the most amount of fish. Unfortunately, their trash wounded up into the lake, adding " + trashToAdd +
+			"units of trash.";
+			break;
+
 		default:
 			continueText.text = "Default Text";
 			break;
