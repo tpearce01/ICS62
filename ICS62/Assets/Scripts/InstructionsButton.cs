@@ -19,6 +19,10 @@ public class InstructionsButton : MonoBehaviour {
 	public Text titleText;
 	public Text loadText;
 	public GameObject InstructionPanel;
+	public Text creditsText;
+	public Button creditsButton;
+
+
 	private int fontSize;
 
 	//Global Variables
@@ -39,6 +43,8 @@ public class InstructionsButton : MonoBehaviour {
 		quitButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		returnButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		instructionsText.GetComponentInChildren<Text> ().fontSize = fontSize;
+		creditsText.GetComponentInChildren<Text> ().fontSize = fontSize;
+		creditsButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 	}
 
 	//Set GUI objects active/inactive
@@ -51,6 +57,13 @@ public class InstructionsButton : MonoBehaviour {
 		instructionsTitle.gameObject.SetActive (!instructionsTitle.IsActive ());
 		titleText.gameObject.SetActive (!titleText.IsActive ());
 		InstructionPanel.SetActive (!InstructionPanel.activeSelf);
+	}
+
+	public void CreditsClicked(){
+		instructionsButton.gameObject.SetActive (!instructionsButton.IsActive ());
+		startButton.gameObject.SetActive (!startButton.IsActive ());
+		quitButton.gameObject.SetActive (!quitButton.IsActive ());
+		creditsText.gameObject.SetActive (!creditsText.IsActive ());
 	}
 		
 
