@@ -19,6 +19,7 @@ public class InstructionsButton : MonoBehaviour {
 	public Text titleText;
 	public Text loadText;
 	public GameObject InstructionPanel;
+	public GameObject CreditsPanel;
 	public Text creditsText;
 	public Button creditsButton;
 
@@ -64,6 +65,7 @@ public class InstructionsButton : MonoBehaviour {
 		startButton.gameObject.SetActive (!startButton.IsActive ());
 		quitButton.gameObject.SetActive (!quitButton.IsActive ());
 		creditsText.gameObject.SetActive (!creditsText.IsActive ());
+		CreditsPanel.SetActive (!CreditsPanel.activeSelf);
 	}
 		
 
