@@ -16,9 +16,11 @@ public class RodCastInWater : MonoBehaviour {
 	public GameObject triggerObject;
 	public GameObject background;
 	public GameObject reelAudio;
+	public GameObject fishModel;
 
 	private Text trashText;
 	private AudioSource splashAudio;
+	private int lastFishInWater;
 	private GameObject fishIconCopy;
 	private GameObject playerBarCopy;
 	private GameObject progressBarCopy;
@@ -26,6 +28,7 @@ public class RodCastInWater : MonoBehaviour {
 	private GameObject backgroundCopy;
 	private GameObject trashCaught;
 	private GameObject reelAudioCopy;
+	private GameObject fishModelCopy;
 
 	private bool inWater;		//is the bobber in the water?
 	private bool hasBite;		//is a fish biting the line?
@@ -45,6 +48,7 @@ public class RodCastInWater : MonoBehaviour {
 		gameStarted = false;
 		trashText = GameObject.FindGameObjectWithTag ("TrashText").GetComponent<Text>();
 		splashAudio = this.gameObject.GetComponent<AudioSource> ();
+		lastFishInWater = globalVars.fishInWater;
 	}
 	
 	// Update is called once per frame
@@ -79,6 +83,9 @@ public class RodCastInWater : MonoBehaviour {
 		}
 		if (trashOnLine) {
 			trashCaught.transform.position = this.transform.position;
+		}
+		if (globalVars.fishInWater < lastFishInWater) {
+			fishModelCopy.transform.position = this.transform.position;
 		}
 	}
 
@@ -148,6 +155,9 @@ public class RodCastInWater : MonoBehaviour {
 	}
 
 	public void destroyBobber(){
+		if (globalVars.fishInWater < lastFishInWater) {
+			fishModelCopy = (GameObject)Instantiate (fishModel, this.transform.position, this.transform.rotation);
+		}
 		if (GameObject.FindGameObjectWithTag ("ReelAudio") != null) {
 			Destroy (GameObject.FindGameObjectWithTag ("ReelAudio"));
 		}
@@ -166,8 +176,8 @@ public class RodCastInWater : MonoBehaviour {
 		inWater = false;
 		this.GetComponent<Rigidbody> ().useGravity = true;
 		transform.LookAt (playerScript.gameObject.transform.position);
-		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.up * 400);
-		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 33 * distance);
+		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.up * 420);
+		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 36 * distance);
 	}
 		
 	void startMinigame(){
