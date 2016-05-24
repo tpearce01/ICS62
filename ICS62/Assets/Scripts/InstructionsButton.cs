@@ -17,6 +17,7 @@ public class InstructionsButton : MonoBehaviour {
 	public Text instructionsText;
 	public Text instructionsTitle;
 	public Text titleText;
+	public Text loadText;
 	public GameObject InstructionPanel;
 	private int fontSize;
 
@@ -30,6 +31,7 @@ public class InstructionsButton : MonoBehaviour {
 		fontSize = (int)(globalVars.screenRatio * titleText.fontSize);
 		titleText.fontSize = fontSize;
 		instructionsTitle.fontSize = fontSize;
+		loadText.GetComponentInChildren<Text> ().fontSize = fontSize;
 
 		fontSize = (int)(globalVars.screenRatio * startButton.GetComponentInChildren<Text>().fontSize);
 		startButton.GetComponentInChildren<Text> ().fontSize = fontSize;
