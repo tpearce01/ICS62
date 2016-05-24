@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2389000}
   - 114: {fileID: 11407516}
   - 54: {fileID: 5480996}
+  - 82: {fileID: 8239330}
   m_Layer: 0
   m_Name: RodCast
   m_TagString: Bobber
@@ -80,6 +81,80 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &8239330
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190106}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 028a2e90cac88447f907323dce6328fa, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11407516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,11 +167,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catchWindow: 1.5
+  trashOnLine: 0
   fishIcon: {fileID: 128510, guid: 4d13aadf827b34404953a39e2a21399e, type: 2}
   playerBar: {fileID: 112710, guid: 30c41bfc5a66743a08fd1289cc06e207, type: 2}
   progressBar: {fileID: 159098, guid: cdf82409acafc47dea00829a5eb4607d, type: 2}
   triggerObject: {fileID: 191530, guid: 3d30582b435af47b9bf958ffbe215a42, type: 2}
   background: {fileID: 148214, guid: 0c6c47add70e34fa88386bea60c80e55, type: 2}
+  reelAudio: {fileID: 193890, guid: 68baf4bfd9d444524b2bf9327f938027, type: 2}
 --- !u!135 &13580294
 SphereCollider:
   m_ObjectHideFlags: 1

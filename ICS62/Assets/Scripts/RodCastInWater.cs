@@ -15,13 +15,17 @@ public class RodCastInWater : MonoBehaviour {
 	public GameObject progressBar;
 	public GameObject triggerObject;
 	public GameObject background;
+	public GameObject reelAudio;
 
 	private Text trashText;
+	private AudioSource splashAudio;
 	private GameObject fishIconCopy;
 	private GameObject playerBarCopy;
 	private GameObject progressBarCopy;
 	private GameObject triggerObjectCopy;
 	private GameObject backgroundCopy;
+	private GameObject trashCaught;
+	private GameObject reelAudioCopy;
 
 	private bool inWater;		//is the bobber in the water?
 	private bool hasBite;		//is a fish biting the line?
@@ -40,6 +44,7 @@ public class RodCastInWater : MonoBehaviour {
 		hasBite = false;
 		gameStarted = false;
 		trashText = GameObject.FindGameObjectWithTag ("TrashText").GetComponent<Text>();
+		splashAudio = this.gameObject.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -56,6 +61,7 @@ public class RodCastInWater : MonoBehaviour {
 			if (timeToLive < 0 && !hasBite && timeToLive > -catchWindow) {
 				//Fish is active on the line. Player has 1.5 seconds to respond successfully
 				hasBite = true;
+				splashAudio.Play ();
 			} else if (timeToLive < -catchWindow && hasBite) {
 				//Fish is no longer active on the line
 				hasBite = false;
@@ -70,6 +76,9 @@ public class RodCastInWater : MonoBehaviour {
 			moveX = Random.Range (-1, 2);
 			moveZ = Random.Range (-1, 2);
 			this.transform.position = new Vector3(this.transform.position.x + (moveX * 0.1f), this.transform.position.y, this.transform.position.z + (moveZ * 0.1f));
+		}
+		if (trashOnLine) {
+			trashCaught.transform.position = this.transform.position;
 		}
 	}
 
@@ -114,6 +123,7 @@ public class RodCastInWater : MonoBehaviour {
 				//fish
 				Debug.Log("Fish on line");
 				gameStarted = true;
+				reelAudioCopy = (GameObject)Instantiate (reelAudio, this.transform.position, this.transform.rotation);
 				startMinigame ();
 			} else {
 				//trash
@@ -121,6 +131,8 @@ public class RodCastInWater : MonoBehaviour {
 				globalVars.trashInWater--;
 				trashText.text = "Trash: " + globalVars.trashInWater;
 				trashOnLine = true;
+				trashCaught = GameObject.FindGameObjectWithTag ("Trash");
+				trashCaught.GetComponent<Rigidbody> ().useGravity = true;
 				destroyBobber ();
 			}
 
@@ -136,6 +148,9 @@ public class RodCastInWater : MonoBehaviour {
 	}
 
 	public void destroyBobber(){
+		if (GameObject.FindGameObjectWithTag ("ReelAudio") != null) {
+			Destroy (GameObject.FindGameObjectWithTag ("ReelAudio"));
+		}
 		if (gameStarted) {
 			Destroy (fishIconCopy);
 			Destroy (progressBarCopy);
@@ -152,7 +167,7 @@ public class RodCastInWater : MonoBehaviour {
 		this.GetComponent<Rigidbody> ().useGravity = true;
 		transform.LookAt (playerScript.gameObject.transform.position);
 		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.up * 400);
-		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 32 * distance);
+		this.gameObject.GetComponent<Rigidbody> ().AddForce (transform.forward * 33 * distance);
 	}
 		
 	void startMinigame(){
