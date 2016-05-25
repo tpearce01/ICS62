@@ -114,10 +114,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1095789454}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.053212393, y: 0.21400002}
-  m_AnchorMax: {x: 0.938, y: 0.7563483}
-  m_AnchoredPosition: {x: 0.8880005, y: -0.099998474}
-  m_SizeDelta: {x: 2.1759987, y: 2.899994}
+  m_AnchorMin: {x: 0.053212393, y: 0.08150149}
+  m_AnchorMax: {x: 0.938, y: 0.82900006}
+  m_AnchoredPosition: {x: 0.8880005, y: 3.1809998}
+  m_SizeDelta: {x: 2.2, y: -2.8300018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &32583076
 MonoBehaviour:
@@ -252,9 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 742862887}
-  instructionsButton: {fileID: 768538046}
+  instructionsButton: {fileID: 1212573104}
   quitButton: {fileID: 588450219}
-  returnButton: {fileID: 1212573104}
+  nextButton: {fileID: 1212573104}
   instructionsText: {fileID: 1516359470}
   instructionsTitle: {fileID: 1788412989}
   titleText: {fileID: 437975463}
@@ -291,7 +291,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.0000076293945}
@@ -533,7 +533,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_AnchorMin: {x: 0.07300001, y: 0.16975223}
   m_AnchorMax: {x: 0.938, y: 0.656}
   m_AnchoredPosition: {x: 0.5999999, y: 0.06499863}
@@ -621,7 +621,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.67436284, y: 0.08150149}
   m_AnchorMax: {x: 0.938, y: 0.16975223}
-  m_AnchoredPosition: {x: 1.5, y: 0.12999725}
+  m_AnchoredPosition: {x: -0.5, y: 0.12999725}
   m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &588450219
@@ -709,79 +709,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588450217}
---- !u!1 &684875416
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 684875417}
-  - 222: {fileID: 684875419}
-  - 114: {fileID: 684875418}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &684875417
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684875416}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 768538045}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &684875418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684875416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Instructions
---- !u!222 &684875419
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684875416}
 --- !u!1 &742862885
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +742,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.062000003, y: 0.08150149}
   m_AnchorMax: {x: 0.31642476, y: 0.16975223}
-  m_AnchoredPosition: {x: 0.5, y: 0.05000305}
+  m_AnchoredPosition: {x: 6.6449966, y: -0.4270172}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742862887
@@ -857,8 +784,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 101854535}
-        m_MethodName: LoadLevelOne
+      - m_Target: {fileID: 101854536}
+        m_MethodName: clickMe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -933,11 +860,11 @@ RectTransform:
   m_Children:
   - {fileID: 1287476742}
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 10
-  m_AnchorMin: {x: 0.8675752, y: 0.92045134}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.6199951, y: -2}
-  m_SizeDelta: {x: -1.2489929, y: 4}
+  m_RootOrder: 9
+  m_AnchorMin: {x: 0.37600002, y: 0.08150149}
+  m_AnchorMax: {x: 0.61749446, y: 0.16975223}
+  m_AnchoredPosition: {x: 1.5016785, y: -0.36999512}
+  m_SizeDelta: {x: 6.0999985, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742983465
 MonoBehaviour:
@@ -1024,127 +951,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 742983463}
---- !u!1 &768538044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 768538045}
-  - 222: {fileID: 768538048}
-  - 114: {fileID: 768538047}
-  - 114: {fileID: 768538046}
-  m_Layer: 5
-  m_Name: InstructionsButton
-  m_TagString: MainMenuUI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &768538045
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768538044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 684875417}
-  m_Father: {fileID: 1095789454}
-  m_RootOrder: 5
-  m_AnchorMin: {x: 0.37157527, y: 0.08150149}
-  m_AnchorMax: {x: 0.62600005, y: 0.16975223}
-  m_AnchoredPosition: {x: 0.5, y: 0.05000305}
-  m_SizeDelta: {x: 5, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &768538046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768538044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 768538047}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 101854536}
-        m_MethodName: clickMe
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &768538047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768538044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.44705886, g: 0.93725497, b: 0.93725497, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &768538048
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768538044}
 --- !u!1 &784664883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +979,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_AnchorMin: {x: 0.053212393, y: 0.16975223}
   m_AnchorMax: {x: 0.938, y: 0.676649}
   m_AnchoredPosition: {x: 0.9080105, y: -0.72701263}
@@ -1422,7 +1228,6 @@ RectTransform:
   - {fileID: 742862886}
   - {fileID: 588450218}
   - {fileID: 437975462}
-  - {fileID: 768538045}
   - {fileID: 1212573103}
   - {fileID: 1516359472}
   - {fileID: 1788412987}
@@ -1527,7 +1332,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_AnchorMin: {x: 0.34936288, y: 0.42600003}
   m_AnchorMax: {x: 0.6971504, y: 0.574}
   m_AnchoredPosition: {x: 0.61198425, y: 0}
@@ -1584,7 +1389,7 @@ GameObject:
   - 114: {fileID: 1212573105}
   - 114: {fileID: 1212573104}
   m_Layer: 5
-  m_Name: ReturnButton
+  m_Name: NextButton
   m_TagString: InstructionsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1602,11 +1407,11 @@ RectTransform:
   m_Children:
   - {fileID: 1351639223}
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 6
-  m_AnchorMin: {x: 0, y: 0.08150149}
-  m_AnchorMax: {x: 0.9845133, y: 0.16975223}
-  m_AnchoredPosition: {x: 3.5, y: 0}
-  m_SizeDelta: {x: -285, y: 0}
+  m_RootOrder: 5
+  m_AnchorMin: {x: 0.31642476, y: 0}
+  m_AnchorMax: {x: 0.6653741, y: 0.08150149}
+  m_AnchoredPosition: {x: 3.3985977, y: 1.7779999}
+  m_SizeDelta: {x: -1, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212573104
 MonoBehaviour:
@@ -1647,8 +1452,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 101854536}
-        m_MethodName: clickMe
+      - m_Target: {fileID: 101854535}
+        m_MethodName: LoadLevelOne
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1810,7 +1615,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000010728836, y: 0}
+  m_AnchoredPosition: {x: 0.000004529953, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287476743
@@ -1918,7 +1723,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return
+  m_Text: Next
 --- !u!222 &1351639225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1979,10 +1784,10 @@ MonoBehaviour:
     his family. You must catch enough fish every day to feed your family, but with
     the water's pollution constantly rising, it will be harder and harder to make
     end's meet. If you run out of money, your family will starve!\n\nControls:\nMovement
-    - WASD\nCast Line/Pull Line Back - Left Click\n               (When You hear the
-    \"Bobber Dip Sound\" - Press \"Left Click\" to catch fish)\nCatch Fish - Match
-    the Red Bar with the Fish Icon: \n                    Hold Left Click to raise
-    red bar and Release to lower red bar. \n\n"
+    - WASD\nCast Line/Pull Line Back - Left Click (When You hear the \"Bobber Dip
+    Sound\" - Press \"Left Click\" to catch fish)\nCatch Fish - Match the Red Bar
+    with the Fish Icon: Hold Left Click to raise red bar and Release to lower red
+    bar. \n\n"
 --- !u!222 &1516359471
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2000,11 +1805,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 7
-  m_AnchorMin: {x: 0.053212393, y: 0.16975223}
-  m_AnchorMax: {x: 0.938, y: 0.721}
-  m_AnchoredPosition: {x: 2, y: 1.3000002}
-  m_SizeDelta: {x: 0, y: 2.6000004}
+  m_RootOrder: 6
+  m_AnchorMin: {x: 0.053212393, y: 0.08150149}
+  m_AnchorMax: {x: 0.938, y: 0.82900006}
+  m_AnchoredPosition: {x: 2.0094, y: 2.675087}
+  m_SizeDelta: {x: 0, y: -2.3499985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1633495674
 GameObject:
@@ -2107,11 +1912,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1095789454}
-  m_RootOrder: 8
-  m_AnchorMin: {x: 0.263, y: 0.8054013}
-  m_AnchorMax: {x: 0.7367876, y: 0.93225074}
-  m_AnchoredPosition: {x: -0.0019664764, y: 0.30000305}
-  m_SizeDelta: {x: -1, y: 0.5999985}
+  m_RootOrder: 7
+  m_AnchorMin: {x: 0.263, y: 0.82900006}
+  m_AnchorMax: {x: 0.7345404, y: 0.95919675}
+  m_AnchoredPosition: {x: -0.4999876, y: 0.91645813}
+  m_SizeDelta: {x: 0, y: -0.40000153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1788412988
 CanvasRenderer:

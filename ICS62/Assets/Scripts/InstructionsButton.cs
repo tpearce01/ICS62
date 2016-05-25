@@ -13,7 +13,7 @@ public class InstructionsButton : MonoBehaviour {
 	public Button startButton;
 	public Button instructionsButton;
 	public Button quitButton;
-	public Button returnButton;
+	public Button nextButton;
 	public Text instructionsText;
 	public Text instructionsTitle;
 	public Text titleText;
@@ -42,7 +42,7 @@ public class InstructionsButton : MonoBehaviour {
 		startButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		instructionsButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		quitButton.GetComponentInChildren<Text> ().fontSize = fontSize;
-		returnButton.GetComponentInChildren<Text> ().fontSize = fontSize;
+		nextButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		instructionsText.GetComponentInChildren<Text> ().fontSize = fontSize;
 		creditsText.GetComponentInChildren<Text> ().fontSize = fontSize;
 		creditsButton.GetComponentInChildren<Text> ().fontSize = fontSize;
@@ -53,15 +53,15 @@ public class InstructionsButton : MonoBehaviour {
 		startButton.gameObject.SetActive (!startButton.IsActive ());
 		instructionsButton.gameObject.SetActive (!instructionsButton.IsActive ());
 		quitButton.gameObject.SetActive (!quitButton.IsActive ());
-		returnButton.gameObject.SetActive (!returnButton.IsActive ());
 		instructionsText.gameObject.SetActive (!instructionsText.IsActive ());
 		instructionsTitle.gameObject.SetActive (!instructionsTitle.IsActive ());
 		titleText.gameObject.SetActive (!titleText.IsActive ());
 		InstructionPanel.SetActive (!InstructionPanel.activeSelf);
+		creditsButton.gameObject.SetActive (!creditsButton.IsActive ());
 	}
 
 	public void CreditsClicked(){
-		instructionsButton.gameObject.SetActive (!instructionsButton.IsActive ());
+		//instructionsButton.gameObject.SetActive (!instructionsButton.IsActive ());
 		startButton.gameObject.SetActive (!startButton.IsActive ());
 		quitButton.gameObject.SetActive (!quitButton.IsActive ());
 		creditsText.gameObject.SetActive (!creditsText.IsActive ());
