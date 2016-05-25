@@ -26,11 +26,16 @@ public class TimerScript : MonoBehaviour {
 	void Start () {
 		globalVars = GameObject.FindGameObjectWithTag ("GlobalVariables").GetComponent<GlobalVariablesScript> ();
 		textToUpdate.text = "Time Remaining: " + (int)timeStart;
-		timeRemaining = timeStart;
 		fishText = GameObject.FindGameObjectWithTag ("FishText").GetComponent<Text>();
 		fishText.text = "Fish: " + globalVars.fishInWater;
 		trashText = GameObject.FindGameObjectWithTag ("TrashText").GetComponent<Text>();
 		trashText.text = "Trash: " + globalVars.trashInWater;
+
+		if (globalVars.currentLevel == 1) {
+			timeStart = 30.0f;
+		} 
+
+		timeRemaining = timeStart;
 	}
 	
 	// Update is called once per frame

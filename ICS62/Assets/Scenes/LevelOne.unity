@@ -2089,7 +2089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2978098fe6704419682f7710cd730515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 120
+  timeStart: 100
   textToUpdate: {fileID: 1716761049}
 --- !u!114 &1570593423
 MonoBehaviour:
