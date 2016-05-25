@@ -1979,8 +1979,9 @@ MonoBehaviour:
     his family. You must catch enough fish every day to feed your family, but with
     the water's pollution constantly rising, it will be harder and harder to make
     end's meet. If you run out of money, your family will starve!\n\nControls:\nMovement
-    - WASD\nCast Line - Left Click\nReel/Catch Fish - Hold Left Click to raise red
-    bar to match fishes position. Release to lower\n\n"
+    - WASD\nCast Line/Pull Line Back - Left Click\n  (When You hear A Reeling sound
+    or bobber dip Sound - Press \"Left Click\")\nCatch Fish - Hold Left Click to raise
+    red bar to match fishes position. Release to lower red bar.\n\n"
 --- !u!222 &1516359471
 CanvasRenderer:
   m_ObjectHideFlags: 0
