@@ -1315,7 +1315,7 @@ MonoBehaviour:
   currentLevel: 1
   fishCaughtTotal: 0
   fishCaughtToday: 0
-  totalMoney: 1000
+  totalMoney: 600
   fishInWater: 100
   trashInWater: 0
   nativeWidth: 452
@@ -1978,7 +1978,7 @@ MonoBehaviour:
     feed him for a lifetime. \n\nYou play as a fisherman trying to make a living for
     his family. You must catch enough fish every day to feed your family. If you run
     out of money, your family will starve!\n\nControls:\nMovement - WASD\nCast Line
-    - Left Click\nReel Fish - Left Click\n\n"
+    - Left Click\nReel Fish - Hold Left Click to raise red bar. Release to lower\n\n"
 --- !u!222 &1516359471
 CanvasRenderer:
   m_ObjectHideFlags: 0
