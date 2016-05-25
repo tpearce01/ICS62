@@ -1976,9 +1976,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Give a man a fish and you feed him for a day; Teach a man to fish and you
     feed him for a lifetime. \n\nYou play as a fisherman trying to make a living for
-    his family. You must catch enough fish every day to feed your family. If you run
-    out of money, your family will starve!\n\nControls:\nMovement - WASD\nCast Line
-    - Left Click\nReel Fish - Hold Left Click to raise red bar. Release to lower\n\n"
+    his family. You must catch enough fish every day to feed your family, but with
+    the water's pollution constantly rising, it will be harder and harder to make
+    end's meet. If you run out of money, your family will starve!\n\nControls:\nMovement
+    - WASD\nCast Line - Left Click\nReel/Catch Fish - Hold Left Click to raise red
+    bar to match fishes position. Release to lower\n\n"
 --- !u!222 &1516359471
 CanvasRenderer:
   m_ObjectHideFlags: 0
