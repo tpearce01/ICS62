@@ -19,6 +19,10 @@ public class TimerScript : MonoBehaviour {
 	private Text trashText;
 	private float timeRemaining;
 
+	public GameObject instructionsPanel;
+	public Text instructionsText;
+	private int fontSize;
+
 	//Global variables
 	private GlobalVariablesScript globalVars;
 
@@ -33,9 +37,16 @@ public class TimerScript : MonoBehaviour {
 
 		if (globalVars.currentLevel == 1) {
 			timeStart = 30.0f;
-		} 
 
+			instructionsPanel.SetActive (!instructionsPanel.activeSelf);
+			instructionsText.gameObject.SetActive (!instructionsText.gameObject.activeSelf);
+			fontSize = (int)(globalVars.screenRatio * instructionsText.GetComponentInChildren<Text>().fontSize);
+			instructionsText.GetComponentInChildren<Text> ().fontSize = fontSize;
+
+		} 
 		timeRemaining = timeStart;
+
+
 	}
 	
 	// Update is called once per frame

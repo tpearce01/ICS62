@@ -44,7 +44,11 @@ public class UpdateEODData : MonoBehaviour {
 
 		//Calculate income & expenses
 		todaysIncome = (globalVars.fishCaughtToday * 125);
-		todaysExpenses = randomizeInt(500);
+		if (globalVars.currentLevel <= 2) {
+			todaysExpenses = 0;
+		} else {
+			todaysExpenses = randomizeInt (400);
+		}
 
 		//Update text
 		fishCaughtText.text = "Fish Caught: " + globalVars.fishCaughtToday;
