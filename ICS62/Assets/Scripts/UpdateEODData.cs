@@ -43,7 +43,7 @@ public class UpdateEODData : MonoBehaviour {
 		globalVars.fishCaughtTotal += globalVars.fishCaughtToday;
 
 		//Calculate income & expenses
-		todaysIncome = (globalVars.fishCaughtToday * 100);
+		todaysIncome = (globalVars.fishCaughtToday * 125);
 		todaysExpenses = randomizeInt(500);
 
 		//Update text

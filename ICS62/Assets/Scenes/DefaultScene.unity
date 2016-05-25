@@ -1315,7 +1315,7 @@ MonoBehaviour:
   currentLevel: 1
   fishCaughtTotal: 0
   fishCaughtToday: 0
-  totalMoney: 1000
+  totalMoney: 600
   fishInWater: 100
   trashInWater: 0
   nativeWidth: 452
