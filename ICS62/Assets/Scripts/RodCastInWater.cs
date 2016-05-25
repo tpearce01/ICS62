@@ -31,8 +31,9 @@ public class RodCastInWater : MonoBehaviour {
 	private GameObject fishModelCopy;
 
 	private bool inWater;		//is the bobber in the water?
-	private bool hasBite;		//is a fish biting the line?
-	private bool gameStarted;	//Has the minigame started?
+    // revert hasBite and gameStarted to private if necessary
+	public bool hasBite;		//is a fish biting the line?
+	public bool gameStarted;	//Has the minigame started?
 	private float timeToLive;	//Time until fish bites
 	private int moveX;			//variable for bobber movement on x coordinate
 	private int moveZ;			//variable for bobber movement on z coordinate

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1a02d93bbf8cda6469b0fb6b19647d86
-timeCreated: 1463637771
+guid: 1287a43ab01c8654ab38a712a6aba3fe
+timeCreated: 1464163190
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -26,7 +26,10 @@ ModelImporter:
     400016: Sixteenth.004
     400018: Sixteenth.004_end
     4300000: Cone
-    7400000: Cast Line Animation
+    7400000: Armature|Cast Line
+    7400002: Armature|Cast Line.002
+    7400004: Armature|CaughtLine
+    7400006: Armature|Pull Line
     9500000: //RootNode
     13700000: Cone
   materials:
@@ -49,55 +52,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Cast Line Animation
-      takeName: Armature|ArmatureAction
-      firstFrame: 0
-      lastFrame: 22
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Armature
-        weight: 1
-      - path: Armature/Half
-        weight: 1
-      - path: Armature/Half/Fourth
-        weight: 1
-      - path: Armature/Half/Fourth/Eighth
-        weight: 1
-      - path: Armature/Half/Fourth/Eighth/Sixteenth
-        weight: 1
-      - path: Armature/Half/Fourth/Eighth/Sixteenth/Sixteenth.002
-        weight: 1
-      - path: Armature/Half/Fourth/Eighth/Sixteenth/Sixteenth.002/Sixteenth.004
-        weight: 1
-      - path: Armature/Half/Fourth/Eighth/Sixteenth/Sixteenth.002/Sixteenth.004/Sixteenth.004_end
-        weight: 1
-      - path: Cone
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
