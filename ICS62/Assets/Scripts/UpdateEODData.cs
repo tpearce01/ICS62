@@ -27,7 +27,7 @@ public class UpdateEODData : MonoBehaviour {
 	public Text previousMoneyText;
 	public Text newBalanceText;
 	public Text continueText;
-	public Text trashText;
+	//public Text trashText;
 	public Button continueButton;
 	public Button nextLevelButton;
 	private int fontSize;
@@ -74,7 +74,7 @@ public class UpdateEODData : MonoBehaviour {
 		previousMoneyText.fontSize = fontSize;
 		newBalanceText.fontSize = fontSize;
 		continueText.fontSize = fontSize;
-		trashText.fontSize = fontSize;
+//		trashText.fontSize = fontSize;
 		continueButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 		nextLevelButton.GetComponentInChildren<Text> ().fontSize = fontSize;
 
@@ -99,7 +99,7 @@ public class UpdateEODData : MonoBehaviour {
 			previousMoneyText.gameObject.SetActive (!previousMoneyText.IsActive ());
 			newBalanceText.gameObject.SetActive (!newBalanceText.IsActive ());
 			continueText.gameObject.SetActive (!continueText.IsActive ());
-			trashText.gameObject.SetActive (!trashText.IsActive ());
+//			trashText.gameObject.SetActive (!trashText.IsActive ());
 
 			//Deactivate/Activate buttons
 			continueButton.gameObject.SetActive (!continueButton.IsActive ());
@@ -231,7 +231,7 @@ public class UpdateEODData : MonoBehaviour {
 
 		globalVars.fishInWater += randomizeInt ((int)(globalVars.fishInWater * 0.05f));
 
-		trashText.text = "Total Units of Trash: " + globalVars.trashInWater;
+//		trashText.text = "Total Units of Trash: " + globalVars.trashInWater;
 	}
 
 
