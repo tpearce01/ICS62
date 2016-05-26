@@ -9,7 +9,7 @@ public class FishingRodController : MonoBehaviour {
     private bool inWater;
     private GameObject RodCast;
     private bool hasBite;
-    private bool gameStarted;
+    private bool reeling;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +17,7 @@ public class FishingRodController : MonoBehaviour {
         isCast = false;
         inWater = false;
         hasBite = false;
-        gameStarted = false;
+        reeling = false;
 	}
 	
 	// Update is called once per frame
@@ -26,9 +26,8 @@ public class FishingRodController : MonoBehaviour {
         {
             isCast = true;
             RodCast = GameObject.Find("RodCast(Clone)");
-
+            //Debug.Log("isCast == true");
             hasBite = RodCast.GetComponent<RodCastInWater>().hasBite;
-            gameStarted = RodCast.GetComponent<RodCastInWater>().gameStarted;
         }
 
         else
@@ -36,13 +35,24 @@ public class FishingRodController : MonoBehaviour {
             isCast = false;
             inWater = false;
             hasBite = false;
-            gameStarted = false;
+
+        }
+
+        if (GameObject.Find("Reel(Clone)") != null)
+        {
+            reeling = true;
+            //Debug.Log("reeling == true");
+        }
+
+        else
+        {
+            reeling = false;
         }
 
         anim.SetBool("hasCast", isCast);
         anim.SetBool("inWater", inWater);
         anim.SetBool("hasBite", hasBite);
-        anim.SetBool("gameStarted", gameStarted);
+        anim.SetBool("reeling", reeling);
 
         //Debug.Log("isCast == " + isCast.ToString());
 
