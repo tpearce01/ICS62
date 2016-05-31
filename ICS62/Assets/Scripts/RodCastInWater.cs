@@ -125,17 +125,17 @@ public class RodCastInWater : MonoBehaviour {
 			//Is it trash or a fish? catchThreshold = % of object that are fish
 			float catchThreshold = (float) globalVars.fishInWater / (globalVars.fishInWater + globalVars.trashInWater);
 			float roll = Random.Range (0.0f, 1.0f);
-			Debug.Log ("CatchThreshold: " + catchThreshold);
-			Debug.Log ("Roll: " + roll);
+			//Debug.Log ("CatchThreshold: " + catchThreshold);
+			//Debug.Log ("Roll: " + roll);
 			if (catchThreshold >= roll) {
 				//fish
-				Debug.Log("Fish on line");
+				//Debug.Log("Fish on line");
 				gameStarted = true;
 				reelAudioCopy = (GameObject)Instantiate (reelAudio, this.transform.position, this.transform.rotation);
 				startMinigame ();
 			} else {
 				//trash
-				Debug.Log("Trash on line");
+				//Debug.Log("Trash on line");
 				globalVars.trashInWater--;
 				trashText.text = "Trash: " + globalVars.trashInWater;
 				trashOnLine = true;
