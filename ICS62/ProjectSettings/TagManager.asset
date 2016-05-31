@@ -23,6 +23,7 @@ TagManager:
   - BGM
   - ReelAudio
   - Load
+  - Bucket
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ GameObject:
   - 54: {fileID: 5476686}
   - 135: {fileID: 13501542}
   - 65: {fileID: 6546110}
+  - 114: {fileID: 11452466}
   m_Layer: 0
   m_Name: GoldFish
   m_TagString: Untagged
@@ -110,6 +111,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11452466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7917412c8a0cc434d932ceea6bdc01a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13501542
 SphereCollider:
   m_ObjectHideFlags: 1

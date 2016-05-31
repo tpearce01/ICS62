@@ -571,17 +571,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Menu Backgrounds - Ridiculous Fishing
-
-    BGM - Stardew Valley
-
-    Building Prefabs - Asset Store
-
-    Sand Texture - Asset Store
-
-    Water Texture - Asset Store
-
-    Dock Model & Texture - Asset Store'
+  m_Text: "Menu Backgrounds - Ridiculous Fishing\n\nModels and Textures: \n\nBGM -
+    Stardew Valley\nBuilding Prefabs - Asset Store\nSand Texture - Asset Store\nWater
+    Texture - Asset Store\nDock Model & Texture - Asset Store\nHalf Cut plus full
+    bottle together - Made in Blender plus all texturizing in blender\nRegular Bottle
+    - Made in Blender plus all texturizing in blender\nCanteen - Made in Blender \nCanteen
+    Texture -  Asset store\nCoke Bottle - Made in Blender\n\"Coke\" text material
+    - google images\nBubbly Brown Texture - google Images\nFish - from blendswap.com\n\nSound
+    Effects:\n\nreeling/splashing sound - freesfx.co.uk \n\n"
 --- !u!222 &571912492
 CanvasRenderer:
   m_ObjectHideFlags: 0
