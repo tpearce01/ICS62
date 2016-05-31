@@ -170,7 +170,7 @@ public class RodCastInWater : MonoBehaviour {
 		//Destroy (this.gameObject);
 		//transform.LookAt(playerScript.gameObject);
 		float distance = Vector3.Distance(this.transform.position, playerScript.gameObject.transform.position);
-		Debug.Log ("Distance: " + distance);
+		//Debug.Log ("Distance: " + distance);
 		if (distance < 14) {
 			distance = 14;
 		} else if (distance < 18) {
