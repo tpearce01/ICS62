@@ -14,18 +14,18 @@ public class triggerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
-		Debug.Log ("trigger enter " + other.tag);
+		//Debug.Log ("trigger enter " + other.tag);
 		if(other.CompareTag("FishIcon")){
-			Debug.Log ("isOverlapping");
+			//Debug.Log ("isOverlapping");
 			barController.isOverlapping = true;
 		}
 	}
 		
 
 	void OnTriggerExit2D (Collider2D other){
-		Debug.Log ("trigger exit " + other.tag);
+		//Debug.Log ("trigger exit " + other.tag);
 		if (other.CompareTag ("FishIcon")) {
-			Debug.Log ("!isOverlapping");
+			//Debug.Log ("!isOverlapping");
 			barController.isOverlapping = false;
 		}
 	}
