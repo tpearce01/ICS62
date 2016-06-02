@@ -24,6 +24,7 @@ TagManager:
   - ReelAudio
   - Load
   - Bucket
+  - Fish
   layers:
   - Default
   - TransparentFX

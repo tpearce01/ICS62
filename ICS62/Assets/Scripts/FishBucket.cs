@@ -2,19 +2,18 @@
 using System.Collections;
 
 public class FishBucket : MonoBehaviour {
-
-	void SetTransformY(float n){
-		transform.position = new Vector3 (36, n, -3);
-	}
-
-	void OnTriggerEnter(Collider other) {
-		//If collides with dock
-		if (other.CompareTag ("Dock")) {
-				//Put Fish in Bucket;
-				SetTransformY(3.0f);
-
-	Debug.Log ("Hello");
 		
+
+	public GameObject bucket;
+
+	void OnCollisionEnter(Collision other)
+		{
+		//if collision with dock, move this object above the bucket
+		if (other.collider.CompareTag ("Dock")) {
+			this.gameObject.transform.localScale = new Vector3 (.2f, .2f, .2f);
+			this.transform.position = new Vector3(36.47f, 2.5f,-3.92f);
+
+		}
 	}
 }
-}
+
