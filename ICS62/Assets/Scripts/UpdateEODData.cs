@@ -121,30 +121,33 @@ public class UpdateEODData : MonoBehaviour {
 		int trashToAdd = 0;
 		switch (globalVars.currentLevel) {
 		case 1:	//Case 1 should not be reached, as it starts at level1 and increments to 2 before this is reached
-			trashToAdd = randomizeInt(10);
+			trashToAdd = randomizeInt(20);
 			continueText.text = 
 				"A music festival is held next to the lake. Although trash cans were available, " +
 			"much of the trash ends up on the ground and eventually makes it into the lake. " +
 			"As a result, " + trashToAdd + " units of trash are added to the lake.";
 			break;
 		case 2:
-			trashToAdd = randomizeInt(12);
+			trashToAdd = randomizeInt(20);
 			continueText.text = 
 				"A music festival is held next to the lake. Although trash cans were available, " +
 				"much of the trash ends up on the ground and eventually makes it into the lake. " +
 				"As a result, " + trashToAdd + " units of trash are added to the lake.";
 			break;
 		case 3:
-			trashToAdd = randomizeInt(14);
+			trashToAdd = randomizeInt (20);
 			continueText.text = 
-				"The nearby factory had an issue with trash lines, and trash accidentally leaked " +
-				"into the lake. The issue was fixed, but " + trashToAdd + " units of trash are added to the lake.";
+				"Annual Fishing Competition is today! Fisherman come from towns nearby to compete on who can catch " +
+				"the most amount of fish. Unfortunately, their trash wounded up into the lake, adding " + trashToAdd +
+				"units of trash.";
 			break;
 		case 4:
-			trashToAdd = randomizeInt (16);
+			trashToAdd = randomizeInt (20);
 			continueText.text =
-				"A storm passes through during the night. Trash littered in the streets is pushed " +
-			"by the water into the ocean, adding " + trashToAdd + " units of trash.";
+				"A nice, sunny day brings a plethora of tourists and locals to the beach. Children leave " +
+				"behind beach toys, and groups hosting bonfires leave behind food and beverage packaging. " +
+				"Cigarette butts also litter the beach and find their way into the water. " + trashToAdd +
+				" units of trash are added.";
 			break;
 		case 5:
 			trashToAdd = randomizeInt (8);
@@ -168,12 +171,10 @@ public class UpdateEODData : MonoBehaviour {
 			"units of trash.";
 			break;
 		case 8:
-			trashToAdd = randomizeInt (20);
-			continueText.text =
-				"A nice, sunny day brings a plethora of tourists and locals to the beach. Children leave " +
-			"behind beach toys, and groups hosting bonfires leave behind food and beverage packaging. " +
-			"Cigarette butts also litter the beach and find their way into the water. " + trashToAdd +
-			" units of trash are added.";
+			trashToAdd = randomizeInt(14);
+			continueText.text = 
+				"The nearby factory had an issue with trash lines, and trash accidentally leaked " +
+				"into the lake. The issue was fixed, but " + trashToAdd + " units of trash are added to the lake.";
 			break;
 		case 9:
 			trashToAdd = randomizeInt (20);
@@ -216,11 +217,11 @@ public class UpdateEODData : MonoBehaviour {
 				"left behind their trash." + trashToAdd + "units of trash.";
 			break;
 		case 15:
-			trashToAdd = randomizeInt (20);
-			continueText.text = 
-				"Annual Fishing Competition is today! Fisherman come from towns nearby to compete on who can catch " +
-			"the most amount of fish. Unfortunately, their trash wounded up into the lake, adding " + trashToAdd +
-			"units of trash.";
+			trashToAdd = randomizeInt (16);
+			continueText.text =
+				"A storm passes through during the night. Trash littered in the streets is pushed " +
+				"by the water into the ocean, adding " + trashToAdd + " units of trash.";
+			
 			break;
 
 		default:
